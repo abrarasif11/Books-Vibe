@@ -7,11 +7,25 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from './Component/Layout/Layout.jsx';
+import Home from './Component/Home/Home.jsx';
+import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
+import BooksDB from './Component/BooksDB/BooksDB.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout/>
+    element: <Layout/>,
+    errorElement: <ErrorPage/>,
+    children : [
+      {
+        path :'/',
+        element:<Home/>
+      },
+      {
+        path:'/dashboard',
+        element: <BooksDB/>
+      }
+    ]
   },
 ]);
 
