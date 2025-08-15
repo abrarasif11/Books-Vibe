@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <h1>Book Vibe</h1>
+      <h1 className='text-3xl'>Book Vibe</h1>
     </>
   )
 }
