@@ -10,6 +10,7 @@ import Layout from './Component/Layout/Layout.jsx';
 import Home from './Component/Home/Home.jsx';
 import ErrorPage from './Component/ErrorPage/ErrorPage.jsx';
 import BooksDB from './Component/BooksDB/BooksDB.jsx';
+import BookDetail from './Component/BookDetail/BookDetail.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path :'/',
         element:<Home/>
+      },
+      {
+       path:'books/:bookId',
+       element:<BookDetail/>
       },
       {
         path:'/dashboard',
