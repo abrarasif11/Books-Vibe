@@ -1,8 +1,9 @@
+import { key } from "localforage";
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Book = ({ book }) => {
-  const { bookId,image, bookName, author, tags, category, rating } = book;
+  const { bookId, image, bookName, author, tags, category, rating } = book;
   return (
     <Link to={`/books/${bookId}`}>
       <div className="card bg-base-100 w-96 p-6 mb-10 shadow-sm">
@@ -11,8 +12,11 @@ const Book = ({ book }) => {
         </figure>
         <div className="card-body">
           <div className="flex justify-center gap-2">
-            {tags.map((tag) => (
-              <button className="btn btn-xs btn-disabled bg-green-50 text-green-800 rounded-2xl">
+            {tags.map((tag, index) => (
+              <button
+                key={index}
+                className="btn btn-xs btn-disabled bg-green-50 text-green-800 rounded-2xl"
+              >
                 {book.tags}
               </button>
             ))}
