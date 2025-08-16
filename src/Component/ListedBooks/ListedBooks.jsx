@@ -24,6 +24,10 @@ const ListedBooks = () => {
       const sortReadList = [...readList].sort((a, b) => a.totalPages - b.totalPages);
       setReadList(sortReadList)
     }
+    if(sortType === 'Ratings'){
+      const sortRating = [...readList].sort((a, b) => a.rating -b.rating);
+      setReadList(sortRating)
+    }
   }
   return (
     <div>
