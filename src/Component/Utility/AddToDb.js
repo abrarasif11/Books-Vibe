@@ -21,14 +21,14 @@ const addToStoredReadList = (id) =>{
    }
 }
 const addToStoredWishList = (id) =>{
-   const storedList = getStoredReadList();
-   if(storedList.includes(id)){
+   const storedWishList = getStoredReadList();
+   if(storedWishList.includes(id)){
     console.log(id, 'already existed')
    }
    else{
-    storedList.push(id)
-    const storedListStr = JSON.stringify(storedList);
-    localStorage.setItem('read-list', storedListStr);
+    storedWishList.push(id)
+    const storedWishListStr = JSON.stringify(storedWishList);
+    localStorage.setItem('read-list', storedWishListStr);
    }
 }
 
