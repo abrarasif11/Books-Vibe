@@ -115,5 +115,19 @@
     "tags": ["Suspense", "Psychological"],
     "publisher": "Riverhead Books",
     "yearOfPublishing": 2015
+  },
+  {
+    "bookId": 10,
+    "bookName": "The Pragmatic Programmer",
+    "author": "Andrew Hunt, David Thomas",
+    "image": "https://imgv2-2-f.scribdassets.com/img/document/402479056/original/c9471f71a8/1?v=1",
+    "review": "Classic must-read for programmers, covering practical techniques and mindset for coding excellence.",
+    "totalPages": 352,
+    "rating": 4.7,
+    "category": "Programming",
+    "tags": ["Software Engineering", "Coding"],
+    "publisher": "Riverhead Books",
+    "yearOfPublishing": 2015
   }
+  
 ]

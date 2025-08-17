@@ -11,6 +11,18 @@ const getStoredReadList = () =>{
   }
 }
 
+
+const getStoredWishList = () =>{
+  const storedListStr = localStorage.getItem('wish-list');
+  if(storedListStr){
+    const storedList = JSON.parse(storedListStr)
+    return storedList;
+  }
+  else{
+    return [];
+  }
+}
+
 const addToStoredReadList = (id) =>{
    const storedList = getStoredReadList();
    if(storedList.includes(id)){
@@ -32,18 +44,28 @@ const addToStoredReadList = (id) =>{
         });
    }
 }
-const addToStoredWishList = (id) =>{
-   const storedWishList = getStoredReadList();
-   if(storedWishList.includes(id)){
-    console.log(id, 'already existed')
-   }
-   else{
-    storedWishList.push(id)
-    const storedWishListStr = JSON.stringify(storedWishList);
-    localStorage.setItem('read-list', storedWishListStr);
-   }
+
+
+const addToStoredWishList = (id) => {
+  const storedWishList = getStoredWishList(); 
+  if(storedWishList.includes(id)){
+   console.log(id, 'already existed')
+  }
+  else{
+   storedWishList.push(id)
+   const storedWishListStr = JSON.stringify(storedWishList);
+   localStorage.setItem('wish-list', storedWishListStr);
+   toast.success('Book Added To WishList', {
+     position: "top-right",
+     autoClose: 1000,
+     hideProgressBar: false,
+     closeOnClick: false,
+     pauseOnHover: true,
+     draggable: true,
+     progress: undefined,
+     theme: "dark",
+   });
+  }
 }
 
-
-
-export { addToStoredReadList, getStoredReadList ,addToStoredWishList }
+export { addToStoredReadList, getStoredReadList ,addToStoredWishList, getStoredWishList }
