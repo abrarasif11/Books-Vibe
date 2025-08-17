@@ -46,6 +46,7 @@ const ListedBooks = () => {
   };
   return (
     <div>
+      <title>Listed Books</title>
       <h1 className="text-center font-semibold mt-5 text-3xl">Book List </h1>
 
       <Tabs>
